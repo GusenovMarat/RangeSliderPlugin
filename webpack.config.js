@@ -86,6 +86,7 @@ module.exports = {
     },
   },
   resolve: {
+		extensions: ['.ts', '.tsx', '.js'],
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),
       '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
@@ -132,10 +133,10 @@ module.exports = {
           type: 'asset/resource',
         },
         {
-          test: /\.m?js$/,
+          test: /\.(js|jsx|tsx|ts)$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader",
+            loader: ['babel-loader', 'ts-loader'],
             options: {
               presets: ["@babel/preset-env"],
               plugins: ['@babel/plugin-proposal-class-properties'],
