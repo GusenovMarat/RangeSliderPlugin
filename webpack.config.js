@@ -18,7 +18,6 @@ const filename = (ext, folder = '') => isDev
 const PATHS = {
   src: path.join(__dirname, "./src"),
   dist: path.join(__dirname, "./dist"),
-  assets: 'assets/'
 };
 
 const PAGES_DIR = `${PATHS.src}/pages`;
@@ -37,9 +36,9 @@ if (PAGES.length > 0) {
 } else {
   entryPoints.index = {
     dependOn: 'slider',
-    import: ['./demo/index.ts', './demo/index.scss'],
+    import: './demo/index.ts',
   };
-  entryPoints.slider = ['./slider/slider.ts', './slider/styles/slider.scss'];
+  entryPoints.slider = './slider/slider.ts';
 }
 
 const plugins = () => {
@@ -49,11 +48,11 @@ const plugins = () => {
     new CopyPlugin({
       patterns: [
         {
-          from: `${PATHS.src}/${PATHS.assets}img`,
+          from: `${PATHS.src}/demo/img`,
           to: `${PATHS.dist}/img`,
         },
         {
-          from: `${PATHS.src}/${PATHS.assets}fonts`,
+          from: `${PATHS.src}/demo/fonts`,
           to: `${PATHS.dist}/fonts`,
         },
       ],
@@ -77,9 +76,8 @@ const plugins = () => {
     });
   } else {
     base.push(new HTMLWebpackPlugin({
-      template: `./demo/page/page.pug`,
+      template: `./demo/index.pug`,
       filename: `index.html`,
-      chunks: ['index', 'slider'],
     }));
   }
 
