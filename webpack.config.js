@@ -31,14 +31,14 @@ const PAGES = fs.existsSync(PAGES_DIR)
 const entryPoints = {};
 if (PAGES.length > 0) {
   PAGES.forEach(page => {
-    entryPoints[page] = `./pages/${page}/${page}.ts`;
+    entryPoints[page] = `./pages/${page}/${page}.js`;
   });
 } else {
   entryPoints.index = {
     dependOn: 'slider',
-    import: './demo/index.ts',
+    import: './demo/index.js',
   };
-  entryPoints.slider = './slider/slider.ts';
+  entryPoints.slider = './slider/slider.js';
 }
 
 const plugins = () => {

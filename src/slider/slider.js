@@ -1,3 +1,5 @@
+import './slider.scss';
+
 class RangeSlider {
 	constructor() {
 		this.setClasses();
