@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	max-width: 266px;
-	// @include font-normal(12px, $dark-shade-50, 100%);
+	font-size: 12px;
 	&__header {
 		display: flex;
 		flex-direction: row;
@@ -13,7 +13,8 @@
 	}
 	&__title {
 		text-transform: uppercase;
-		// @include font-bold(12px, $dark-shade-100, 15px)
+		font-size: 12px;
+		font-weight: bold;
 	}
 	&__prices {
 		display: flex;
@@ -30,7 +31,7 @@
 	&__track {
 		position: relative;
 		background-color: white;
-		// border: 1px solid $dark-shade-25;
+		border: 1px solid grey;
 		border-radius: 3px;
 		height: 6px;
 	}
@@ -41,7 +42,7 @@
 		left: 33%;
 		right: 33%;
 		border-radius: 5px;
-		// background-image: $green-blue-gradient;
+		background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 	}
 	&__value {
   	position: absolute;
@@ -60,7 +61,7 @@
 			width: 12px;
 			border: 2px solid white;
 			border-radius: 50%;
-			// background-image: $green-blue-gradient;
+			background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 			cursor: pointer;
 		}
 	}
@@ -68,7 +69,8 @@
 		margin-top: 15px;
 		font-size: 12px;
 		line-height: 14px;
-		// color: $dark-shade-50;
+		color: black;
+		opacity: 50%;
 		&::first-letter {
 			text-transform: uppercase;
 		}
