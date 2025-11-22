@@ -48,11 +48,11 @@ const plugins = () => {
     new CopyPlugin({
       patterns: [
         {
-          from: `${PATHS.src}/demo/img`,
+          from: `${PATHS.src}/demo/assets/img`,
           to: `${PATHS.dist}/img`,
         },
         {
-          from: `${PATHS.src}/demo/fonts`,
+          from: `${PATHS.src}/demo/assets/fonts`,
           to: `${PATHS.dist}/fonts`,
         },
       ],
@@ -213,7 +213,6 @@ module.exports = {
             presets: [
               "@babel/preset-env",
               "@babel/preset-typescript",
-              "@babel/preset-react"
             ],
             plugins: [
               '@babel/plugin-transform-class-properties'
