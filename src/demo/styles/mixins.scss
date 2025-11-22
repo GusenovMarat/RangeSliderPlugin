@@ -1,0 +1,63 @@
+
+@mixin font-face($font-name, $path, $fw: normal, $fs: normal)  {
+	@font-face {
+		font-family: $font-name;
+    src: 
+			url('../assets/fonts/#{$path}.ttf') format('truetype'),
+			url('../assets/fonts/#{$path}.woff') format('woff'),
+			url('../assets/fonts/#{$path}.woff2') format('woff2'),
+			url('../assets/fonts/#{$path}.svg##{$path}') format('svg');
+		font-weight: $fw;
+		font-style: $fs;
+		font-display: swap;
+	}
+}
+	
+@mixin font-bold ($fs: $fs-normal,
+  $cl: $dark-shade-100,
+  $lh: normal,
+  $fstl: normal,
+  $fw: bold) {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  color: $cl;
+  font-style: $fstl;
+  font-weight: $fw;
+}
+
+@mixin font-normal ($fs: $h3,
+  $cl: $dark-shade-100,
+  $lh: normal,
+  $fstl: normal,
+  $fw: normal) {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  color: $cl;
+  font-style: $fstl;
+  font-weight: $fw;
+}
+
+@mixin material-icon ($fs: normal,
+  $fc: white,
+  $lh: normal,
+  $fw: normal,
+	$fstl: normal,
+) {
+  display: inline-block;
+  font-family: 'Material-icons','Arial', sans-serif;
+  speak: never;
+  color: $fc;
+	font-style: $fstl;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}

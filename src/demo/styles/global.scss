@@ -1,0 +1,23 @@
+@import '~normalize.css';
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./mixins.scss";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0
+}
+
+body {
+	@include font-normal($fs-normal, $dark-shade-100, 24px);
+}
+
+html {
+  color: $dark-shade-100;
+  background-color: rgba(255, 255, 255, 1)
+}
